@@ -71,7 +71,7 @@ function App() {
     const handleKeyDown = (event) => {
       const { key } = event;
 
-      if (!isNaN(key) || ['+', '-', '*', '/', '.', '(', ')'].includes(key)) {
+      if (!isNaN(key) || ['+', '-', '*', '/', '.', '(', ')', '^'].includes(key)) {
         // To handle a negative number, determine it is a negative number or an operator
         if (key === '-') {
           // If the input box is empty or the last char is operator, then '-' is apart negative number
@@ -88,6 +88,12 @@ function App() {
         handleBackSpace();
       } else if (key === 'Escape') {
         handleClear();
+      } else if (key === '%') {
+        handlePercentage();
+      } else if (key === '√') {
+        handleSquareRoot();
+      } else if (key === '±') {
+        handleToggleSign();   // Use ± to toggle sign
       }
     };
 
@@ -113,6 +119,11 @@ function App() {
           <button onClick={() => handleButtonClick("(")}>(</button>
           <button onClick={() => handleButtonClick(")")}>)</button>
           <button onClick={handleBackSpace}>←</button>
+
+          <button onClick={handleSquareRoot}>√</button>
+          <button onClick={() => handleButtonClick("^")}>^</button> {/* Using ^ meaning POWER*/}
+          <button onClick={handlePercentage}>%</button>
+          <button onClick={handleToggleSign}>±</button>
 
           <button onClick={() => handleButtonClick("7")}>7</button>
           <button onClick={() => handleButtonClick("8")}>8</button>
