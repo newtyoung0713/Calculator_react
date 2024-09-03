@@ -18,6 +18,9 @@ This project is a fully functional calculator web application built using React.
 - **History Feature:** Displays a log of previous calculations so users can refer to or re-use them.
 - **Display:** Shows the current input or result of the calculations, with a secondary display for showing the history or input expression.
 
+## Executed Window
+![Calculator App Screenshot](src/Executed.png)
+
 ## Learning Goals
 - **State Management:** Utilize React's `useState` hook to manage the input, operator, result, and history states.
 - **Event Handling:** Implement click and keyboard event handling to capture user interactions.
