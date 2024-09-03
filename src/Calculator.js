@@ -105,7 +105,7 @@ function Calculator({ input, setInput, history, setHistory }) {
   }, [input, setInput, handleEqual, handlePercentage, handleSquareRoot, handleBackSpace, handleToggleSign, handleClear]);
 
   return (
-    <div className='calculator'>
+    <div className='calculator-container'>
       <div className='display'>
         {input || "0"}
       </div>

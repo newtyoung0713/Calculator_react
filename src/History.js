@@ -3,7 +3,7 @@ import './App.css';
 
 function History({ history, setInput }) {
   return (
-    <div className='history'>
+    <div className='history-container'>
       <h2>History</h2>
       <ul>
         {history.map((entry, index) => (
